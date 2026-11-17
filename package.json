@@ -1,0 +1,70 @@
+{
+  "name": "pawsip",
+  "version": "1.0.0",
+  "description": "PawSip - Offline-first desktop hydration reminder with an animated puppy",
+  "main": "electron/main.js",
+  "type": "module",
+  "scripts": {
+    "dev:vite": "vite",
+    "dev:electron": "wait-on tcp:5173 && node scripts/start-electron.cjs",
+    "dev": "concurrently -k -r \"npm run dev:vite\" \"npm run dev:electron\"",
+    "start": "node scripts/start-electron.cjs",
+    "build:renderer": "vite build",
+    "build": "vite build",
+    "build:icon": "powershell -ExecutionPolicy Bypass -File scripts/generate-icon.ps1",
+    "dist": "npm run build:icon && vite build && electron-builder --win nsis",
+    "dist:dir": "npm run build:icon && vite build && electron-builder --dir"
+  },
+  "dependencies": {
+    "electron-store": "^10.0.0",
+    "framer-motion": "^12.4.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8",
+    "vite": "^6.2.0",
+    "wait-on": "^8.0.2"
+  },
+  "build": {
+    "appId": "com.pawsip.app",
+    "productName": "PawSip",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "build/icon.ico",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "public/assets/dog",
+        "to": "assets/dog"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "PawSip",
+      "artifactName": "PawSip Setup.${ext}",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "uninstallDisplayName": "PawSip",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

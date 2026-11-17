@@ -1,0 +1,128 @@
+/* Frosted Glass Speech Bubble */
+
+.speech-bubble-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+  z-index: 10;
+  max-width: 420px;
+  width: 90%;
+  pointer-events: auto;
+}
+
+.speech-bubble-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px) saturate(180%);
+  -webkit-backdrop-filter: blur(14px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 32px rgba(92, 64, 51, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 22px;
+  padding: 16px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Frosted glass tail pointing down to dog */
+.speech-bubble-tail {
+  position: absolute;
+  bottom: -11px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-right: 1.5px solid rgba(255, 255, 255, 0.85);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 3px 3px 6px rgba(92, 64, 51, 0.06);
+  z-index: 1;
+}
+
+.speech-bubble-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.speech-bubble-text {
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: #3d2c22;
+  font-weight: 600;
+  min-height: 1.5em;
+  letter-spacing: -0.01em;
+  word-break: break-word;
+}
+
+/* Typing cursor */
+.typing-cursor {
+  display: inline-block;
+  margin-left: 2px;
+  font-weight: 700;
+  color: #f07b22;
+  animation: blink-cursor 0.75s infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Optional buttons in speech bubble */
+.speech-bubble-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.bubble-btn {
+  background: #ffffff;
+  color: #4a3427;
+  border: 1px solid #ebdcd0;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(92, 64, 51, 0.06);
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.bubble-btn:hover {
+  background: #fff8f2;
+  border-color: #f7b488;
+  color: #d85c27;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(216, 92, 39, 0.15);
+}
+
+.bubble-btn:active {
+  transform: translateY(0);
+}
+
+.bubble-btn.primary {
+  background: linear-gradient(135deg, #ffa978 0%, #f07b22 100%);
+  color: #ffffff;
+  border-color: #e26e17;
+  box-shadow: 0 3px 10px rgba(240, 123, 34, 0.28);
+}
+
+.bubble-btn.primary:hover {
+  background: linear-gradient(135deg, #ffb48a 0%, #f58632 100%);
+  box-shadow: 0 5px 14px rgba(240, 123, 34, 0.38);
+}

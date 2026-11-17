@@ -1,0 +1,5 @@
+Test started
+[2026-11-17T08:04:49.788Z] Waiting for store and app ready...
+[2026-11-17T08:04:51.795Z] Loaded dist/index.html
+[2026-11-17T08:04:52.016Z] [Renderer]: [storageService] Error fetching all settings from electron-store: Error: Error invoking remote method 'store:getAll': Error: No handler registered for 'store:getAll'
+[2026-11-17T08:04:53.006Z] window.api.store methods exposed: true

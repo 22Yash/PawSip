@@ -1,0 +1,532 @@
+/* Home Page Styles */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px 20px 40px;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.home-header {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.home-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.home-titles {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.home-settings-btn {
+  background: #ffffff;
+  border: 1.5px solid #ebdcd0;
+  color: #5c4436;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(92, 64, 51, 0.06);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.home-settings-btn:hover {
+  background: #fbf7f2;
+  border-color: #f7b488;
+  color: #d85c27;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(216, 92, 39, 0.12);
+}
+
+.home-greeting {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #3d2a1f;
+  margin-bottom: 4px;
+}
+
+.home-subgreeting {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7a6557;
+  margin: 0;
+}
+
+/* Character Stage in Home */
+.home-stage {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  min-height: 290px;
+}
+
+/* Home Quick Stats Card */
+.home-stats-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 36px rgba(92, 64, 51, 0.08);
+  border-radius: 28px;
+  padding: 24px 28px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+.home-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.home-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #4a3427;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-goal-badge {
+  background: #e6f6f5;
+  color: #2b7d77;
+  border: 1px solid #bceae5;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* Progress bar placeholder */
+.home-progress-container {
+  margin-bottom: 18px;
+}
+
+.home-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #634f42;
+  margin-bottom: 6px;
+}
+
+.home-progress-bar-bg {
+  width: 100%;
+  height: 14px;
+  background: #f0e6dc;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.home-progress-bar-fill {
+  height: 100%;
+  width: 25%;
+  background: linear-gradient(90deg, #95d1cc 0%, #48a9de 100%);
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+/* Quick Metrics Row */
+.home-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.metric-pill {
+  background: #fcf9f4;
+  border: 1.5px solid #ebe0d5;
+  border-radius: 18px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metric-icon {
+  font-size: 1.3rem;
+}
+
+.metric-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #8c7365;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-val {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #4a3427;
+}
+
+/* Home Action Buttons */
+.home-actions-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+/* Hidden dev footer */
+.dev-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.dev-link {
+  background: none;
+  border: none;
+  font-size: 0.78rem;
+  color: #a49182;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.18s ease;
+}
+
+.dev-link:hover {
+  color: #d85c27;
+}
+
+
+.test-reminder-btn {
+  background: #fff8f0;
+  border-color: #f6cfac;
+  color: #c95d24;
+  font-weight: 800;
+}
+
+.test-reminder-btn:hover {
+  background: #fdecdb;
+  border-color: #f1ab70;
+  color: #b74d15;
+}
+
+.dev-toggle-chip {
+  background: #f4ede5;
+  border: 1px solid #dfd0c3;
+  color: #7d6555;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dev-toggle-chip:hover {
+  background: #ebe0d4;
+  color: #554133;
+}
+
+.dev-toggle-chip.active {
+  background: #fff2e6;
+  border-color: #f8b482;
+  color: #d85c27;
+  box-shadow: 0 2px 6px rgba(216, 92, 39, 0.15);
+}
+
+/* Voice Reminders & SpeechSynthesis Card */
+.home-voice-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 36px rgba(92, 64, 51, 0.08);
+  border-radius: 28px;
+  padding: 22px 28px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+.voice-card-subtitle {
+  font-size: 0.84rem;
+  color: #7a6557;
+  margin: -6px 0 16px;
+  line-height: 1.4;
+}
+
+/* Toggle switch for Voice Enabled */
+.voice-toggle-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.voice-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.voice-toggle-slider {
+  width: 44px;
+  height: 24px;
+  background-color: #e2d6ca;
+  border-radius: 999px;
+  position: relative;
+  transition: background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.voice-toggle-slider::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.voice-toggle-switch input:checked + .voice-toggle-slider {
+  background-color: #2da499;
+}
+
+.voice-toggle-switch input:checked + .voice-toggle-slider::before {
+  transform: translateX(20px);
+}
+
+.voice-toggle-label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #5a4235;
+  min-width: 28px;
+}
+
+/* Voice Picker Dropdown */
+.voice-picker-group {
+  margin-bottom: 16px;
+}
+
+.voice-input-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #5c4436;
+  margin-bottom: 6px;
+}
+
+.voice-select-dropdown {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #3b281d;
+  background: #fbf8f4;
+  border: 1.5px solid #e5d7cc;
+  border-radius: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.voice-select-dropdown:focus {
+  border-color: #48a9de;
+  box-shadow: 0 0 0 3px rgba(72, 169, 222, 0.2);
+}
+
+/* Voice Sliders Grid */
+.voice-sliders-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.voice-slider-item {
+  background: #fcf9f5;
+  border: 1.5px solid #ebdcd0;
+  border-radius: 16px;
+  padding: 12px 14px;
+}
+
+.voice-slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.voice-slider-header label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #634f43;
+}
+
+.voice-val-tag {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #c95d24;
+  background: #fdf2e9;
+  padding: 2px 7px;
+  border-radius: 8px;
+  border: 1px solid #fae1ce;
+}
+
+.voice-range-slider {
+  width: 100%;
+  accent-color: #f07b22;
+  cursor: pointer;
+}
+
+/* Voice Card Footer & Test Voice Button */
+.voice-card-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-test-voice {
+  background: linear-gradient(135deg, #ffa477 0%, #f07b22 100%);
+  color: #ffffff;
+  border: 1px solid #d96918;
+  padding: 9px 18px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(240, 123, 34, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-test-voice:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(240, 123, 34, 0.35);
+}
+
+.btn-test-voice.is-speaking {
+  background: #e76f51;
+  border-color: #d05335;
+  animation: pulse-speaking-btn 1.2s infinite;
+}
+
+@keyframes pulse-speaking-btn {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.voice-status-feedback {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #2b7d77;
+}
+
+/* Windows Integration & Startup Card */
+.home-windows-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 16px 36px rgba(92, 64, 51, 0.08);
+  border-radius: 28px;
+  padding: 22px 28px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+.home-tray-badge {
+  background: #f0f4ff;
+  color: #4a6fe3;
+  border: 1px solid #d3e0fc;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.windows-card-subtitle {
+  font-size: 0.84rem;
+  color: #7a6557;
+  margin: -6px 0 18px;
+  line-height: 1.4;
+}
+
+.windows-toggles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.windows-toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fcf9f5;
+  border: 1.5px solid #ebdcd0;
+  border-radius: 18px;
+  padding: 14px 18px;
+  gap: 16px;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.windows-toggle-row.disabled {
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.windows-toggle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.windows-toggle-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #432e22;
+}
+
+.windows-toggle-desc {
+  font-size: 0.78rem;
+  color: #846f61;
+  line-height: 1.35;
+}
