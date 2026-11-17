@@ -96,6 +96,11 @@ The application will install normally. The app contains zero network calls or te
 - Search for **PawSip** and click **Uninstall**.
 - Alternatively, run the `Uninstall PawSip.exe` found in the PawSip installation folder or via the Start Menu shortcut.
 - Your settings and hydration logs in `%APPDATA%\pawsip` are preserved safely. To remove all local data, delete `%APPDATA%\pawsip`.
+- Open PowerShell and run:
+  Get-Process electron,PawSip -ErrorAction SilentlyContinue | Select-Object Name,Id,Path
+  (The Path column tells you which copy it is. A path inside your pawsip\node_modules\electron\dist folder is the dev copy. A path under AppData\Local\Programs\PawSip is the installed one.)
+ taskkill /F /IM electron.exe /T
+ taskkill /F /IM PawSip.exe /T
 
 ---
 
